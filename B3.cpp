@@ -1,22 +1,21 @@
-//// c1
+// c1
 //#include <stdio.h>
+//#include <math.h>
 //
 //int main() {
 //    int q;
-//    scanf("%d", &q); // Nh?p s? lu?ng truy v?n
+//    scanf("%d", &q);
 //
 //    while (q--) {
-//        int a;
-//        scanf("%d", &a); // Nh?p trang sách Bình dang d?c d?n
+//        int n;
+//        scanf("%d", &n);
 //
 //        int sum = 0;
-//        for (int i = 1; i <= a; i++) {
-//            int temp = i;
-//            while (temp > 0) {
-//                sum++;
-//                temp /= 10;
-//            }
+//
+//        for (int i = 1; i <= n; i++) {
+//            sum += pow(-1, i) * i;
 //        }
+//
 //        printf("%d\n", sum);
 //    }
 //
@@ -24,32 +23,24 @@
 //}
 
 
-// c2
+//c2
 #include <stdio.h>
+#include <math.h>
 
 int main() {
     int q;
-    scanf("%d", &q); // Nh?p s? lu?ng truy v?
+    scanf("%d", &q);
 
     while (q--) {
-        int a;
-        scanf("%d", &a); 
+        int n;
+        scanf("%d", &n);
 
-        int sum = 0;				
-        int count = 1; 					
-        int base = 10; 				
-
-        while (a >= base) {
-            sum += count * (base - base / 10);
-            count++;
-            base *= 10;
-        }
-        sum += count * (a - base / 10 + 1);
-
-        printf("%d\n", sum);
+        if (n % 2 == 0)
+        	printf("%d\n", n/2);
+        else
+        	printf("%d\n", -(n+1)/2);
     }
 
     return 0;
 }
-
 
